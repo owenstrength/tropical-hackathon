@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import './App.css';
 
 
-// test 
+// test backend
 function App() {
   return (
     <motion.div className="App">
