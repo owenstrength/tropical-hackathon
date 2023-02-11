@@ -1,27 +1,15 @@
-import logo from './logo.svg';
-import { motion } from "framer-motion";
-import './App.css';
 
-// test backend
+
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./pages/Navbar";
+import Home from "./pages/Home"
+import AnimatedRoutes from "./pages/AnimatedRoutes";
+
 function App() {
   return (
-    <motion.div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </motion.div >
-  );
-}
+  <Router>
+    <AnimatedRoutes />
+  </Router>
+  )}
 
 export default App;
