@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import { motion } from "framer-motion";
 import './App.css';
 
-
 // test backend
 function App() {
   return (
