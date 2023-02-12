@@ -1,19 +1,25 @@
-import { Router } from 'express';
+const express = require('express');
 
-import { find } from '../models/cocktail';
+const Cocktail = require('../models/cocktails');
+const router = express.Router();
 
-const router = Router();
+
+
+
 
 
 // Routes
 router.get('/', (req, res) => {
 
-    find({  })
+    Cocktail.find({ })
         .then((data) => {
             console.log('Data: ', data);
             res.json(data);
         })
         .catch((error) => {
             console.log('error: ', error);
+            res.json(error);
         });
 });
+
+module.exports = router;
