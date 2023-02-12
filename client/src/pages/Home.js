@@ -39,7 +39,7 @@ export const Home = () => {
 
     <div className="buttonContainer">
 
-    <button className="buttonL" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => navigate('/about', { replace: true })}>Select Ingredients</button>
+    <button className="buttonL" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => navigate('/selection', { replace: true })}>Select Ingredients</button>
     <button className="buttonR" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => navigate('/about', { replace: true })}>Random</button>
 
 

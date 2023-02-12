@@ -1,0 +1,32 @@
+.drinkCards {
+    width: auto;
+    height: auto;
+    background-color: #db9075;
+    margin: 1%;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: none;
+    padding: 20px;
+}
+
+  
+button:hover {
+    scale: 1.05;
+    
+  }
+
+  
+.drinkCards {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+     }
+}
