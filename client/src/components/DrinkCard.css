@@ -1,11 +1,10 @@
 .drinkCards {
     width: auto;
     height: auto;
-    background-color: #db9075;
+    background: none;
     margin: 1%;
     border-radius: 20px;
     transition: 0.3s;
-    border: none;
     padding: 20px;
 }
 

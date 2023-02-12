@@ -33,7 +33,7 @@ export const Home = () => {
       </div>
       {/*<SearchBar />*/}
       <p style={{fontFamily: "Ragile", fontSize: 30, color: "#424242"}}>
-        it taste yummy. i like yummy things. you should too
+        Find a cocktail that's right for you
       </p>
     </motion.div>
 
