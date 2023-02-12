@@ -3,16 +3,22 @@
     margin-top: -17%;
 }
 .pouring-liquid {
-    width: 120px;
+    width: 110px;
     height: 50px;
     margin-top: -110px;
     background: rgb(242,142,28);
     background: linear-gradient(0deg, rgba(242,142,28,1) 29%, rgba(246,193,1,1) 100%);
-    margin-left:50px;
+    margin-left:45px;
     margin-right: 50px;
 }
-.container{
-    margin-left: 0px;
+.containerL{
+    margin-left: 100px;
+    margin-top: 18%;
+}
+
+.textContainer{
+    justify-content: center;
+    align-items: center;
 }
 
 .glass {
@@ -23,7 +29,7 @@
     height: 375px;
     border-radius:70% / 10% ;
     width: 225px;
-    margin-top: 33%;
+    margin-top: 20;
 
     margin-left: 40%;
     /*background: rgb(2,0,36);
@@ -33,9 +39,76 @@
     */
     background: rgb(242,142,28);
     background: linear-gradient(0deg, rgba(242,142,28,1) 29%, rgba(246,193,1,1) 100%);
+
 }
 
 .drinking-glass{
     margin-top: -90%;
     margin-left: -158%;
 }
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+  }
+  
+  .wave {
+    background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 250px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  
+  @keyframes wave {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes buttonwave {
+    0% {
+      transform: translate3d(0, 10px, 0);
+    }
+    100% {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+  
+  @keyframes buttonwave2 {
+    0% {
+      transform: translate3d(0, -10px, 0);
+    }
+    100% {
+      transform: translate3d(0, 10px, 0);
+    }
+  }
+  
+  @keyframes swell {
+    0%,
+      100% {
+      transform: translate3d(0, -25px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+  }
+  .endWave{
+      display:none;
+  }

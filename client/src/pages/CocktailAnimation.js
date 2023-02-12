@@ -13,6 +13,11 @@ function CocktailAnimation() {
   const [isSet, setIsSet] = useState(false)
   const [data, setData] = useState(null)
 
+  const [name, setName] = useState(null)
+  const [ingredients, setIngredients] = useState(null)
+  const [instruct, setInstruct] = useState(null)
+  const [glass, setGlass] = useState(null)
+
   useEffect(()=>{
 		setId(JSON.parse(params.drink))
 	}, [])
@@ -26,7 +31,19 @@ function CocktailAnimation() {
 
   return (
     <>
-    <div className="container">
+    {
+      data ? (
+        <>
+      <div className="container" style={{fontFamily: "Ragile", fontSize: 30, color: "#323232", margin: "10px"}}>
+      <div className="drink"> {JSON.stringify(data[0].strDrink).substring(1, JSON.stringify(data[0].strDrink).length-1)}</div>
+      <div className="drink"> {(JSON.stringify(data[0].strCombo).substring(2, JSON.stringify(data[0].strCombo).length-2)).replace(/,,+/, '')}</div>
+      <div className="drink"> {JSON.stringify(data[0].strGlass).substring(1, JSON.stringify(data[0].strGlass).length-1)}</div>
+      <div className="drink"> {JSON.stringify(data[0].strInstructions).substring(1, JSON.stringify(data[0].strInstructions).length-1)}</div>
+      </div>
+      </>
+      
+    ) : (<></>)}
+    <div className="containerL">
         <motion.div
         
         className="motion-div-1"
@@ -55,7 +72,12 @@ function CocktailAnimation() {
             <img src={DrinkingGlass} className='drinking-glass'/>
           </div>
     </div>
-    <div className="drink"> {JSON.stringify(data)}</div>
+
+    <div className="ocean">
+      <div className="wave"></div>
+      <div className="wave"></div>
+      </div>
+    
 
     </>
 
