@@ -13,7 +13,7 @@ function Home() {
       transition={{ duration: 3 }}
     >
       <h1>Cocktails, choose your ingredients</h1>
-      <SearchBar />
+      {/*<SearchBar />*/}
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, qui.
         Hic animi distinctio et maiores, ab nostrum at neque. Iusto minus
