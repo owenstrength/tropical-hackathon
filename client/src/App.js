@@ -8,7 +8,7 @@ import AnimatedRoutes from "./pages/AnimatedRoutes";
 function App() {
   return (
   <Router>
-    <AnimatedRoutes />
+    <Home />
   </Router>
   )}
 
