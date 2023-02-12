@@ -1,6 +1,7 @@
-// Import npm packages
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
@@ -8,7 +9,7 @@ const PORT = process.env.PORT || 8080; // Step 1
 const routes = require('./routes/api');
 
 // Step 2
-mongoose.connect("mongodb+srv://admin:admin@cocktails.cjtp5wr.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://admin:admin@cocktails.cjtp5wr.mongodb.net/cocktails-data?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // HTTP request logger
+app.use(morgan('tiny'));
 app.use('/api', routes);
 
 
