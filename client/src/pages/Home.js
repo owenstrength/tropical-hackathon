@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import SearchBar from "../components/SearchBar";
+//import TextField from "@mui/material/TextField";
+//import List from "./Components/List"
 function Home() {
   return (
     <motion.div
@@ -11,7 +13,7 @@ function Home() {
       transition={{ duration: 3 }}
     >
       <h1>Cocktails, choose your ingredients</h1>
-        
+      <SearchBar />
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, qui.
         Hic animi distinctio et maiores, ab nostrum at neque. Iusto minus
