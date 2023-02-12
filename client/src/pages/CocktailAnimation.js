@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import Glass from '../assets/images/glass_cup.svg'
+import DrinkingGlass from '../assets/images/drinking_glass.svg'
 import { useParams } from "react-router-dom";
 import './CocktailAnimation.css'
 
@@ -25,15 +26,15 @@ function CocktailAnimation() {
 
   return (
     <>
-    <div className="animated pour">
-    <motion.div
+    <div className="container">
+        <motion.div
         
-        className="container text-center  bg-black"
+        className="motion-div-1"
         animate={{
             scale: [1, 1, 1, 1],
             rotate: [0, 0, 100, 0],
-            borderRadius: ["0%", "0%", "50%", "50%"],
-            position: 'fixed'
+            position: 'fixed',
+            opacity: [1, 1, 1, 1, 0]
 
           }}
           transition={{
@@ -43,14 +44,21 @@ function CocktailAnimation() {
             repeat: Infinity,
             repeatDelay: 1
           }}
-    >   
-        <img src={Glass} />
-      {/*<SearchBar />*/}
-
+    > 
+      <div className="container-shot">
+        <img src={Glass} className="glass"/>
+        <div className="pouring-liquid">
+        </div>
+      </div>
     </motion.div>
+          <div className="liquid">
+            <img src={DrinkingGlass} className='drinking-glass'/>
+          </div>
     </div>
     <div className="drink"> {JSON.stringify(data)}</div>
+
     </>
+
   );
 }
 

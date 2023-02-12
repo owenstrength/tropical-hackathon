@@ -1,8 +1,41 @@
-img{
-    width: 300px;
-    margin: 300px;
-    margin-right: 600px;
+.motion-div-1{
+    margin-left: 28%;
+    margin-top: -17%;
 }
-.drink {
-    color: red;
+.pouring-liquid {
+    width: 120px;
+    height: 50px;
+    margin-top: -110px;
+    background: rgb(242,142,28);
+    background: linear-gradient(0deg, rgba(242,142,28,1) 29%, rgba(246,193,1,1) 100%);
+    margin-left:50px;
+    margin-right: 50px;
+}
+.container{
+    margin-left: 0px;
+}
+
+.glass {
+    width: 200px;
+}
+.liquid{
+    
+    height: 375px;
+    border-radius:70% / 10% ;
+    width: 225px;
+    margin-top: 33%;
+
+    margin-left: 40%;
+    /*background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 2%, rgba(3,2,51,1) 5%, rgba(9,9,121,1) 13%, rgba(0,212,255,1) 100%);*/
+    /*background: rgb(252,244,201);
+    background: linear-gradient(180deg, rgba(252,244,201,1) 2%, rgba(254,227,226,1) 20%, rgba(251,205,242,1) 40%, rgba(232,190,250,1) 60%, rgba(171,191,255,1) 80%, rgba(187,243,192,1) 100%);
+    */
+    background: rgb(242,142,28);
+    background: linear-gradient(0deg, rgba(242,142,28,1) 29%, rgba(246,193,1,1) 100%);
+}
+
+.drinking-glass{
+    margin-top: -90%;
+    margin-left: -158%;
 }
