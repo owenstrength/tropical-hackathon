@@ -21,6 +21,7 @@ const CocktailSchema = new Schema({
     strIngredient14 : String,
     strIngredient15 : String,
     strCombo : String,
+    "" : Number,
 });
 
 // Model

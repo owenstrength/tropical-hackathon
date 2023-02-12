@@ -7,6 +7,8 @@ import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
 
 import './Home.css'
+
+
 export const Home = () => {
 
   let navigate = useNavigate(); 

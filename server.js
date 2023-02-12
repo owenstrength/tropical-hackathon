@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+var cors = require('cors')
 const morgan = require('morgan');
 const path = require('path');
 
@@ -31,6 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // HTTP request logger
 app.use(morgan('tiny'));
+app.use(cors());
 app.use('/api', routes);
 
 
