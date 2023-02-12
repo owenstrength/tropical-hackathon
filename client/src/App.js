@@ -5,6 +5,7 @@ import Navbar from "./pages/Navbar";
 import Home from "./pages/Home"
 import AnimatedRoutes from "./pages/AnimatedRoutes";
 import About from "./pages/About";
+import CocktailSelection from "./pages/CocktailSelection";
 import CocktailAnimation from "./pages/CocktailAnimation";
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<CocktailAnimation />} />
       <Route path="/about" element={<About />} />
+      <Route path="/selection" element={<CocktailSelection />} />
+      <Route path="/final/:drink" element={<CocktailAnimation />} />
     </Routes>
   </Router>
   )}

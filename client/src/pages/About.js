@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+
 function About() {
+  const [isSet, setIsSet] = useState(null)
+  const [data, setData] = useState(null)
+  console.log(data)
+  if (!isSet) {
+    fetch("http://localhost:8080/api").then((response) => response.json()).then((json) => {setData(JSON.stringify(json)); setIsSet(true)});
+    console.log(data)
+    console.log(isSet)
+  }
   return (
     <motion.div
       className="container text-center"
@@ -13,10 +22,7 @@ function About() {
       <h1>About Page</h1>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi
-        debitis fuga deserunt, placeat qui optio totam perspiciatis error.
-        Repudiandae, enim veniam. Dolorum officiis recusandae consequuntur
-        veritatis magni aliquam itaque.
+        {data}
       </p>
     </motion.div>
   );

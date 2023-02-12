@@ -1,9 +1,29 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import Glass from '../assets/images/glass_cup.svg'
 import DrinkingGlass from '../assets/images/drinking_glass.svg'
+import { useParams } from "react-router-dom";
 import './CocktailAnimation.css'
+
 function CocktailAnimation() {
+  let params= useParams();
+
+
+  const [drinkId, setId] = useState(null)
+  const [isSet, setIsSet] = useState(false)
+  const [data, setData] = useState(null)
+
+  useEffect(()=>{
+		setId(JSON.parse(params.drink))
+	}, [])
+
+
+  if (drinkId) {
+    if (!isSet) {
+        fetch("http://localhost:8080/api/name/"+drinkId).then((response) => response.json()).then((json) => {setData(json); setIsSet(true)});
+    }
+}
+
   return (
     <>
     <div className="container">
@@ -35,6 +55,8 @@ function CocktailAnimation() {
             <img src={DrinkingGlass} className='drinking-glass'/>
           </div>
     </div>
+    <div className="drink"> {JSON.stringify(data)}</div>
+
     </>
 
   );

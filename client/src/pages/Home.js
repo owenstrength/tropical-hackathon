@@ -1,11 +1,18 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import SearchBar from "../components/SearchBar";
 //import TextField from "@mui/material/TextField";
 //import List from "./Components/List"
+import { useNavigate } from "react-router-dom";
 
 import './Home.css'
+
+
 export const Home = () => {
+
+  let navigate = useNavigate(); 
+
   return (
     <>
     <motion.div
@@ -32,8 +39,9 @@ export const Home = () => {
 
     <div className="buttonContainer">
 
-    <button className="buttonL" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}}>Select Ingredients</button>
-    <button className="buttonR" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => {}}>Random</button>
+    <button className="buttonL" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => navigate('/selection', { replace: true })}>Select Ingredients</button>
+    <button className="buttonR" style={{fontFamily: "Ragile", fontSize: 20, color: "#323232"}} onClick={() => navigate('/about', { replace: true })}>Random</button>
+
 
     </div>
 
