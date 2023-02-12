@@ -4,7 +4,10 @@ import Glass from '../assets/images/glass_cup.svg'
 import './CocktailAnimation.css'
 function CocktailAnimation() {
   return (
+    <>
+    <div className="animated pour">
     <motion.div
+        
         className="container text-center  bg-black"
         animate={{
             scale: [1, 1, 1, 1],
@@ -25,6 +28,9 @@ function CocktailAnimation() {
       {/*<SearchBar />*/}
 
     </motion.div>
+    </div>
+    <div className="drink"> heres</div>
+    </>
   );
 }
 
