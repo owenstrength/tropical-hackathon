@@ -5,12 +5,13 @@ import Navbar from "./pages/Navbar";
 import Home from "./pages/Home"
 import AnimatedRoutes from "./pages/AnimatedRoutes";
 import About from "./pages/About";
+import CocktailAnimation from "./pages/CocktailAnimation";
 
 function App() {
   return (
   <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<CocktailAnimation />} />
       <Route path="/about" element={<About />} />
     </Routes>
   </Router>
